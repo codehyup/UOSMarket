@@ -1,0 +1,31 @@
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="/" style="font-weight: bold;">시립마켓</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav">
+            <li class="nav-item active">
+                <a class="nav-link" href="/list">상품들 보기 <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/write">상품 글쓰기</a>
+            </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0 ml-3">
+
+        </form>
+        <input class="form-control mr-sm-2 w-50" type="search" placeholder="물품명등을 검색해보세요!" aria-label="Search"
+            id="search-input">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit" id="search">Search</button>
+        {% if user %}
+        <span class="ml-5 mr-3">{{ user.id }}님</span>
+        {% else %}
+        <button class="btn btn-outline-primary ml-5 mr-2"><a href="/login">로그인</a></button>
+        {% endif %}
+        <!-- <button class="btn btn-outline-primary mr-2"><a href="/likeView">관심상품</a></button> -->
+    </div>
+</nav>
